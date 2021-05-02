@@ -43,8 +43,13 @@
 }
 /*Dando estilos a los hijos(productos)*/
 .sec-producto {
-  width: max-content;
-  box-shadow: 0 0 5px 5px rgba(56, 56, 56, 0.609);
+  width: 300px;
+  box-shadow: 0 0 10px 2px rgba(73, 73, 73, 0.404);
+
+  /*Estilos para */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .sec-cuerpo {
   padding: 0 12px 12px;
@@ -66,3 +71,29 @@
   content: "S/ ";
 }
 
+.sec-img {
+  position: relative;
+}
+.sec-img img:first-child {
+  position: relative;
+  z-index: 10;
+}
+.sec-img img:last-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.sec-img:hover img:last-child {
+  animation: girar_imagenes 1.8s infinite;
+}
+
+
+@keyframes girar_imagenes {
+  from {
+    z-index: 1;
+  }
+  to {
+      z-index: 11;
+  }
+}
