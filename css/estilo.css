@@ -1,0 +1,87 @@
+@charset "utf-8";
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+img {
+	max-width: 100%;
+}
+input {
+	outline: none;
+}
+body{
+	font-family: 'Open Sans', sans-serif;
+}
+a{
+	color: inherit;
+	text-decoration: none;
+}
+
+.contenedor{
+	max-width: 1200px;
+	margin: auto;
+}
+
+section {
+	width: 100%;
+	margin-bottom: 25px;
+}
+
+.titulo-seccion{
+	font-size: 2em;
+}
+.btn {
+	--colorb:rgb(51, 51, 51);
+	padding: .6em;
+	border: 2px solid var(--colorb);
+	color: black;
+	background-color: transparent;
+	transition: background-color .3s, color .3s;
+	cursor: pointer;
+}
+.btn:hover {
+	color: white;
+	background-color: var(--colorb);
+}
+
+
+/*modificando estilos de slick*/
+:root {
+	--colors:rgba(29, 29, 29, 0.918);
+	--colorp:rgba(59, 59, 59, 0.918);
+}
+.slick-list {
+	width: 100% !important;
+}
+.slick-arrow {
+	background-color: var(--colorp);
+	height: 30px;
+	width: 30px;
+	padding: 2px;
+}
+.slick-arrow:hover {
+	background-color: var(--colors);
+}
+.slick-arrow::before {
+	font-size: 25px;
+	color: white;
+	opacity: 1;
+}
+.slick-prev.slick-arrow {
+	z-index: 12;
+}
+
+.slick-next.slick-arrow {
+	z-index: 12;
+}
+.slick-prev:focus, .slick-next:focus {
+	color:white;
+	background:var(--colorp);
+}
+.slick-prev.slick-disabled, .slick-next.slick-disabled,.slick-prev.slick-disabled:before{
+	background-color: gray;
+	color: white;
+	opacity: .6;
+}

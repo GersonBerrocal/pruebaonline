@@ -1,0 +1,48 @@
+@charset "utf-8";
+
+/* Todos los elementos HTML */
+
+*{
+	margin:0px;
+	padding:0px;
+}
+
+.nosotros{
+	/* margin-left:28%; */
+	margin-top:15px;
+}
+
+.nosotros-textos{
+	padding: .8em;
+	display: grid;
+	grid-template-columns: auto auto;
+	grid-gap: 1em;
+}
+@media screen and (max-width:720px){
+	.nosotros-textos{
+		grid-template-columns: auto;
+	}
+	.map-iframe {
+	max-width: 100%;
+}
+
+}
+.nosotros-texto {
+	text-align: justify;
+}
+
+
+
+.nosotros-titulo{
+	margin-left:15px;
+}
+
+
+
+.c-map {
+	text-align: center;
+	margin: 2em 0;
+}
+
+
+

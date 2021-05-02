@@ -1,0 +1,45 @@
+body {
+  background-color: rgb(238, 238, 238);
+}
+.formulario-servicio {
+  padding: 2em 0;
+}
+.form-item_titulo {
+  font-size: 1.2em;
+  font-weight: bolder;
+  margin: .5em 0;
+}
+.form-item_input select{
+
+}
+.form-item_cont {
+  /* border: 1px solid black; */
+}
+.form-item_sub {
+  font-size: 1rem;
+}
+.form-item_cont .form-flex {
+  display: flex;
+}
+.form-flex .form-item:first-child {
+  margin-right: 1em;
+  /* background-color: red; */
+}
+textarea {
+  resize: none;
+  width: 600px;
+}
+@media screen and (max-width:620px){
+  textarea {
+    min-width: 300px;
+    width: auto;
+  }
+}
+.form-item_img {
+  max-width: 700px;
+  margin: 1em 0;
+  max-width: 450px;
+}
+.form-btn {
+
+}

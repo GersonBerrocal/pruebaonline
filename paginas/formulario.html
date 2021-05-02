@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/estilo.css">
+  <script src="https://kit.fontawesome.com/712575d4a5.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../css/menu.css">
+  <link rel="stylesheet" href="../css/formulario.css">
+  <title>Formulario</title>
+</head>
+
+<body>
+  <header class="header-menu">
+    <div class="contenedor contenedor-menu">
+      <!-- <h1 class="h1 icon-Banner">ADIDAS</h1> -->
+      <h1><a href="../index.html"><img src="../img/logos/vennus-blanco.svg" alt="Vennus"></a></h1>
+      <div class="menu-busqueda">
+        <input type="checkbox" id="menu-bar">
+        <label class="icon-menu" for="menu-bar"></label>
+        <nav class="menu">
+          <a href="./hombres/modaparahombres.html">Hombre</a><a href="https://www.adidas.pe/mujer">Mujer</a><a
+            href="https://www.adidas.pe/ninos">Niño</a><a href="#">Contactanos</a>
+        </nav>
+        <div class="buscar">
+          <input type="text" name="search" placeholder="¿Que buscas?">
+          <div class="btn-menu">
+            <i class="fas fa-search icon"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="contenedor formulario-servicio">
+    <div class="titulo-seccion">
+      Servicio al cliente
+    </div>
+    <div class="form-cliente">
+      <div class="form-seccion">
+        <div class="form-item">
+          <div class="form-item_titulo">Tipo de solicitud</div>
+          <div class="form-item_input">
+            <select name="tipo-solicitud" id="">
+              <option value="">Producto no entregado</option>
+              <option value="">Producto dañado</option>
+              <option value="">Producto equivocado</option>
+              <option value="">Mal servicio</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-item">
+          <div class="form-item_titulo">
+            Fecha de compra
+          </div>
+          <div class="form-item_input">
+            <input type="date">
+          </div>
+        </div>
+        <div class="form-item form-item_cont">
+          <div class="form-item_titulo">Datos del producto</div>
+          <div class="form-flex">
+            <div class="form-item">
+              <div class="form-item_sub">
+                Nombre
+              </div>
+              <div class="form-item_input">
+                <input type="text">
+              </div>
+            </div>
+            <div class="form-item">
+              <div class="form-item_sub">
+                Cantidad
+              </div>
+              <div class="form-item_input">
+                <input type="number" min="1" value="1">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-item form-item_cont">
+          <div class="form-item_titulo">Datos del comprador</div>
+          <div class="form-flex">
+            <div class="form-item">
+              <div class="form-item_sub">Nombre</div>
+              <div class="form-item_input"><input type="text"></div>
+            </div>
+            <div class="form-item">
+              <div class="form-item_sub">Correo</div>
+              <div class="form-item_input"><input type="email" placeholder="ejemplo@gmail.comº"></div>
+            </div>
+          </div>
+        </div>
+        <div class="form-item">
+          <div class="form-item_titulo">Descripcion</div>
+          <div class="form-item_input">
+            <textarea spellcheck="false" name="" id="" cols="30" rows="10"></textarea>
+          </div>
+        </div>
+        <div class="form-item">
+          <div class="form-item_titulo">
+            Adjuntar archivos
+          </div>
+          <input type="file" id="seleccionArchivos">
+          <div class="form-item_img">
+            <img src="" alt="" id="imagenPrevisualizacion">
+          </div>
+        </div>
+        <div class="form-enviar">
+          <button class=" btn form-btn">Enviar solicitud</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    const $seleccionArchivos = document.querySelector("#seleccionArchivos"),
+      $imagenPrevisualizacion = document.querySelector("#imagenPrevisualizacion");
+
+    // Escuchar cuando cambie
+    $seleccionArchivos.addEventListener("change", () => {
+      // Los archivos seleccionados, pueden ser muchos o uno
+      const archivos = $seleccionArchivos.files;
+      // Si no hay archivos salimos de la función y quitamos la imagen
+      if (!archivos || !archivos.length) {
+        $imagenPrevisualizacion.src = "";
+        return;
+      }
+      // Ahora tomamos el primer archivo, el cual vamos a previsualizar
+      const primerArchivo = archivos[0];
+      // Lo convertimos a un objeto de tipo objectURL
+      const objectURL = URL.createObjectURL(primerArchivo);
+      // Y a la fuente de la imagen le ponemos el objectURL
+      $imagenPrevisualizacion.src = objectURL;
+    });
+  </script>
+</body>
+
+</html>

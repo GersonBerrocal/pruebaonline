@@ -1,0 +1,68 @@
+
+
+.sec-nav {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+
+.sec-item img {
+  display: block;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.sec-item a {
+  display: block;
+  text-align: center;
+  margin: 12px 0;
+  font-weight: bolder;
+  font-size: 23px;
+  transition: background-color .3s,color .3s,border-radius 0;
+}
+.sec-item a:hover,.sec-item a.focus {
+  /* text-decoration: underline; */
+  background-color: rgb(49, 49, 49);
+  border-radius: 10px;
+  color: white;
+}
+
+/**Dando estilos al padre de las secciones*/
+.sec-pro {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-row-gap: 22px;
+  display: none;
+  justify-items: center;
+}
+.sec-pro.focus {
+  display: grid;
+}
+/*Dando estilos a los hijos(productos)*/
+.sec-producto {
+  width: max-content;
+  box-shadow: 0 0 5px 5px rgba(56, 56, 56, 0.609);
+}
+.sec-cuerpo {
+  padding: 0 12px 12px;
+}
+.sec-cuerpo-nombre {
+  font-size: 22px;
+}
+.sec-cuerpo .estrellas {
+  margin: 10px 0;
+}
+.sec-cuerpo .estrellas i {
+  font-size: 22px;
+}
+.sec-cuerpo-precio {
+  font-size: 30px;
+  color: rgb(255, 29, 29);
+}
+.sec-cuerpo-precio::before {
+  content: "S/ ";
+}
+
