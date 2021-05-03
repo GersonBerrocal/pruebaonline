@@ -14,6 +14,7 @@
   height: 130px;
   border-radius: 50%;
   object-fit: cover;
+  border: 2px solid rgba(27, 27, 27, 0.753);
 }
 .sec-item a {
   display: block;
@@ -30,16 +31,78 @@
   color: white;
 }
 
-/**Dando estilos al padre de las secciones*/
+/*Dando estilos al padre de las secciones*/
 .sec-pro {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-row-gap: 22px;
+  /*grid-auto-flow modifica la colocacion automatica, */
+  /*dense rellena los huecos en las cuadriculas grid*/
+  grid-auto-flow: row dense;
+  grid-row-gap: 40px;
   display: none;
   justify-items: center;
 }
 .sec-pro.focus {
   display: grid;
+}
+.sec-panel {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  width: 100%;
+  background-color: rgba(253, 244, 160, 0.87);
+  overflow: hidden;
+  padding: 0;
+  display: none;
+  height: auto;
+  transform-origin: top;
+  transform: scale(1,0);
+}
+.sec-panel.panel-extendido {
+  padding: 18px;
+  display: initial;
+  animation: extender .5s;
+  animation-fill-mode: forwards;
+}
+@keyframes extender {
+  to {
+    transform: scale(1,1);
+  }
+}
+.panel-nombre {
+  font-size: 30px;
+  margin-top: 5px;
+}
+.sec-panel .sec-cuerpo{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-left: 60px;
+}
+.sec-panel .sec-producto{
+  flex-direction: row;
+  width: 100%;
+  box-shadow: none;
+  justify-content: flex-start;
+}
+.panel-close {
+  text-align: right;
+  margin: 0 !important;
+}
+.panel-close i {
+  cursor: pointer;
+  font-size: 20px;
+}
+.panel-datos>*{
+  margin: 24px 0;
+}
+.sec-panel .sec-cuerpo {
+  flex: 1;
+}
+.sec-panel img {
+  max-height: 420px;
+}
+.sec-panel .sec-img img:last-child{
+  animation: girar_imagenes 2s infinite;
 }
 /*Dando estilos a los hijos(productos)*/
 .sec-producto {
@@ -55,8 +118,13 @@
   padding: 0 12px 12px;
 }
 .sec-cuerpo-nombre {
+  cursor: pointer;
   font-size: 22px;
 }
+.sec-cuerpo-nombre:hover {
+  text-decoration: underline;
+}
+
 .sec-cuerpo .estrellas {
   margin: 10px 0;
 }
@@ -85,7 +153,9 @@
   z-index: 1;
 }
 .sec-img:hover img:last-child {
-  animation: girar_imagenes 1.8s infinite;
+  /*Elegir de que forma se muestra*/
+  /* animation: girar_imagenes 1.8s infinite; */
+  z-index: 11;
 }
 
 
