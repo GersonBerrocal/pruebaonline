@@ -10,7 +10,8 @@ function panel_estructura(producto) {
     texto_estrellas += `<i class="${clase} fa-star"></i>`
   }
   var panel = document.createElement("div")
-  panel.className = "sec-panel panel-extendido"
+  panel.className = "sec-panel panel-extendido";
+  panel.id = "panel"
   var estructura = `
         <div class="sec-producto">
           <div class="sec-img">

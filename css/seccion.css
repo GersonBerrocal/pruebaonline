@@ -42,12 +42,32 @@
   display: none;
   justify-items: center;
 }
+
+@media screen and (max-width:1000px){
+  .sec-pro {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+  }
+}
+@media screen and (max-width:680px){
+  .sec-pro {
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+  }
+  .sec-panel .sec-producto {
+    flex-direction: column !important;
+  }
+  .sec-panel .sec-cuerpo {
+    padding-left: 0 !important;
+  }
+}
+
 .sec-pro.focus {
   display: grid;
 }
 .sec-panel {
   grid-column-start: 1;
-  grid-column-end: 4;
+  grid-column-end: -1;
   width: 100%;
   background-color: rgba(253, 244, 160, 0.87);
   overflow: hidden;
