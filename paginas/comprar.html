@@ -5,12 +5,103 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/estilo.css">
+  <link rel="stylesheet" href="/css/menu.css">
+  <link rel="stylesheet" href="/css/footer.css">
+  <link rel="stylesheet" href="/css/fontello.css">
+  <script src="https://kit.fontawesome.com/712575d4a5.js" crossorigin="anonymous"></script>
+
   <title>Document</title>
 </head>
+<style>
+  body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .marco {
+    padding: 4px;
+    background: rgb(255, 63, 63);
+    max-width: 600px;
+    margin: auto;
+  }
+
+  .mensaje {
+    background: rgb(255, 63, 63);
+    border: 3px solid white;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    padding: 30px;
+  }
+</style>
 
 <body>
-  <div>
-    Aun no hay pagina
+  <header class="header-menu">
+    <div class="contenedor contenedor-menu">
+      <!-- <h1 class="h1 icon-Banner">ADIDAS</h1> -->
+      <h1><img src="/img/logos/vennus-blanco.svg" alt="Vennus"></h1>
+      <div class="menu-busqueda">
+        <input type="checkbox" id="menu-bar">
+        <label class="icon-menu" for="menu-bar"></label>
+        <nav class="menu">
+          <a href="/paginas/hombres/hombres.html">Hombre</a><a href="/paginas/mujeres/mujeres.html">Mujer</a><a
+            href="/paginas/ninos/ninos.html">Niño</a>
+        </nav>
+        <div class="buscar">
+          <input type="text" name="search" placeholder="¿Que buscas?">
+          <div class="btn-menu">
+            <i class="fas fa-search icon"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="marco">
+    <div class="mensaje">
+      La sección de compras no esta permitida
+    </div>
+  </div>
+  <div class="contenedor-footer">
+    <footer class="contenedor footer">
+      <div class="footer-logo">
+        <img src="/img/logos/vennus-blanco.svg" alt="">
+      </div>
+      <ul class="footer-secciones">
+
+        <li class="contactanos">
+          <h2>Contactanos</h2>
+
+          <ul class="servicio">
+            <li><a href="/paginas/formulario.html">Servicio Al Cliente</a></li>
+          </ul>
+        </li>
+
+        <li class="secciones">
+          <h2>Secciones</h2>
+
+          <ul class="secciones">
+            <li><a href="/paginas/hombres/hombres.html">Hombre</a></li>
+            <li><a href="/paginas/mujeres/mujers.html">Mujer</a></li>
+            <li><a href="/paginas/ninos/ninos.html">Niños</a></li>
+          </ul>
+        </li>
+
+        <li class="redes">
+          <h2>Redes</h2>
+
+          <ul class="sociales">
+            <li><a href="https://www.facebook.com/Vennus-586712688015741/?ref=page_internal"> <i
+                  class="fab fa-facebook-f"></i> Facebook</a></li>
+            <li><a href="https://www.instagram.com/vennus.latam/"><i class="fab fa-instagram"></i> Instagram</a></li>
+            <li><a href="https://twitter.com/ElmerAlonsoCub1"><i class="fab fa-twitter"></i> Twitter</a></li>
+          </ul>
+        </li>
+
+      </ul>
+    </footer>
   </div>
 </body>
 

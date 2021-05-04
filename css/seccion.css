@@ -1,5 +1,8 @@
 
 
+.o-hidden {
+  overflow: auto;
+}
 .sec-nav {
   display: flex;
   justify-content: space-around;
@@ -7,7 +10,12 @@
   margin-bottom: 25px;
 }
 
+/*
 
+
+width: max-content;
+
+*/
 .sec-item img {
   display: block;
   width: 130px;
@@ -50,6 +58,15 @@
   }
 }
 @media screen and (max-width:680px){
+  .o-hidden {
+    margin-bottom: 16px;
+  }
+  .sec-nav {
+    width: max-content;
+  }
+  .sec-item {
+    margin: 0 12px;
+  }
   .sec-pro {
     grid-template-columns: 1fr;
     grid-gap: 20px;
@@ -187,3 +204,4 @@
       z-index: 11;
   }
 }
+
