@@ -1,6 +1,7 @@
 // general, todas las secciones tiene "todos"
 var link_todos = document.getElementById("link_todos")
 
+
 // esto es para hombres
 var link_jeans = document.getElementById("link_jeans") //esto sera usado en niños
 var link_pantalones = document.getElementById("link_pantalones")
@@ -20,8 +21,8 @@ var link_buzos = document.getElementById("link_buzos");
 var seccion_actual = document.getElementById("todos");
 var link_actual = link_todos;
 
-function cambiar_seccion(el, linkp) {
-  var seccion = document.getElementById(el);
+function cambiar_seccion(id, linkp) {
+  var seccion = document.getElementById(id);
   // esconder actual
   seccion_actual.classList.remove("focus")
   link_actual.classList.remove("focus");
@@ -37,6 +38,8 @@ function cambiar_seccion(el, linkp) {
 link_todos.addEventListener("click", function () {
   cambiar_seccion("todos", this)
 })
+
+
 //para hombres
 if (link_pantalones) {
   link_jeans.addEventListener("click", function () {
